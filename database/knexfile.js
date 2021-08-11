@@ -1,4 +1,5 @@
 require('dotenv').config()
+const path = require('path');
 
 const developmentConfig = {
     database: process.env.DB_NAME,
