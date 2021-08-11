@@ -25,7 +25,7 @@ class GenreController {
                     console.log(err);
                 })
         } catch (error) {
-            res.status(500).json({'message': 'Something wrong!'});
+            res.status(500).json({'message': error});
         }
     }
 }

@@ -7,10 +7,10 @@ let urls = {
     production: 'https://test-deploy-pern.herokuapp.com/v1/'
 }
 
-// export const testapis = process.env['APP_URL_' + urls.toUpperCase()]
+const isProduction = process.env.REACT_APP_NODE_ENV === 'production';
 
 const api = Axios.create({
-    baseURL: urls[process.env.REACT_APP_NODE_ENV],
+    baseURL: isProduction ? urls.production : urls.development,
     headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'

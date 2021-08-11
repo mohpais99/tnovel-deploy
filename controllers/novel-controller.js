@@ -9,7 +9,7 @@ class GenreController {
                     res.status(200).json({'data': res.rows});
                 })
                 .catch(err => {
-                    res.status(500).json({'data': []});
+                    res.status(500).json({'data': [], 'message': err});
                 })
         } catch (error) {
             console.log(error);
@@ -36,11 +36,11 @@ class GenreController {
                     res.status(201).json({'s': 1, 'message': res});
                 })
                 .catch(err => {
-                    res.status(500).json({'s': 0, 'message': 'Gagal membuat novel'});
+                    res.status(500).json({'s': 0, 'message': err});
                 })
         } catch (error) {
             console.log(error)
-            res.status(500).json({'message': 'Something wrong!'});
+            res.status(500).json({'message': error});
         }
     }
     async getNovelBySlug(req, res) {
@@ -56,7 +56,7 @@ class GenreController {
                 })
         } catch (error) {
             console.log(error);
-            res.status(500).json({'message': 'Something wrong!'});
+            res.status(500).json({'message': error});
         }
     }
 }
