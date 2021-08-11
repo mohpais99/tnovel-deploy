@@ -11,8 +11,12 @@ const app = express()
 if (process.env.NODE_ENV === 'production11') {
     app.use(express.static(path.join(__dirname, "client/build")));
 }
+const isProduction = process.env.NODE_ENV === 'production'
+const origin = {
+    origin: isProduction ? 'https://tnovel.herokuapp.com' : '*',
+}
 
-app.use(cors())
+app.use(cors(origin))
 app.use(bodyParser.json({limit: "30mb", extended: true}));
 app.use(bodyParser.urlencoded({limit: "30mb", extended: true}));
 
