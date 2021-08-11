@@ -1,21 +1,39 @@
-const knex = require('knex');
-const knexfile = require('./knexfile');
+require('dotenv').config()
 
-const db = knex(knexfile[process.env.NODE_ENV === 'production' ? process.env.NODE_ENV : "development"]);
-module.exports = db;
+const {Pool} = require('pg');
 
+const isProduction = process.env.NODE_ENV === 'production';
+const developmentConfig = `postgresql://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`
+const productionConfig = process.env.DATABASE_URL
 
-// const Pool = require('pg').Pool;
+const pool = new Pool({
+    connectionString = isProduction ? productionConfig : developmentConfig,
+    ssl: isProduction,
+})
+
+module.exports = {pool}
+
+// const developmentConfig = {
+//     user:     process.env.DB_USER,
+//     password: process.env.DB_PASS,
+//     host: process.env.DB_HOST,
+//     database: process.env.DB_NAME,
+//     port: process.env.DB_PORT,
+// }
+
+// const productionConfig = {
+//     connectionStringuser: process.env.DATABASE_URL,
+// }
+
+// const pool = new Pool(developmentConfig)
 
 // const pool = new Pool({ 
-//     user: process.env.USER, 
-//     host: 'localhost', 
-//     database: process.env.DB, 
-//     password: process.env.PASS, 
+//     user: process.env.DB_USER, 
+//     database: process.env.DB_NAME, 
+//     password: process.env.DB_PASS, 
 //     dialect: 'postgres', 
 //     port: 5432 
 // });
-
 // module.exports = pool;
 
 // pool.connect()
