@@ -3,9 +3,9 @@ const {pool} = require('../database/db');
 module.exports = {
     /**
      * DB Query
-     * @param {object} req
-     * @param {object} res
-     * @returns {object} object
+     * @param {quertText} :string
+     * @param {params} :array
+     * @returns {data} :object
      */
     query(quertText, params) {
         return new Promise((resolve, reject) => {

@@ -8,7 +8,7 @@ const path = require('path');
 
 const app = express()
 
-if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === 'production11') {
     app.use(express.static(path.join(__dirname, "client/build")));
 }
 
@@ -23,9 +23,9 @@ app.use(express.urlencoded({ extended: true }));
 // route api config
 app.use('/v1', indexRouter);
 // handle page not found
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, "client/build/index.html"))
-});
+// app.get('*', (req, res) => {
+//     res.sendFile(path.join(__dirname, "client/build/index.html"))
+// });
 
 module.exports = app;
 
