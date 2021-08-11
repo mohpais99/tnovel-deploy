@@ -3,15 +3,27 @@ require('dotenv').config()
 const {Pool} = require('pg');
 
 const isProduction = process.env.NODE_ENV === 'production';
+
 const developmentConfig = `postgresql://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`
 const productionConfig = process.env.DATABASE_URL
 
 const pool = new Pool({
-    connectionString = isProduction ? productionConfig : developmentConfig,
+    connectionString: isProduction ? productionConfig : developmentConfig,
     ssl: isProduction,
 })
 
-module.exports = {pool}
+module.exports = {
+    query(quertText, params) {
+        return new Promise((resolve, reject) => {
+            pool.query(quertText, params, (err, res) => {
+                if (err) {
+                    reject(err)
+                }
+                resolve(res)
+            })
+        })
+    }
+}
 
 // const developmentConfig = {
 //     user:     process.env.DB_USER,

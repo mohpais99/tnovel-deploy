@@ -7,7 +7,6 @@ const indexRouter = require('./routes/index');
 const path = require('path');
 
 const app = express()
-// app.use(express.static(path.join(__dirname, "client/build")));
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, "client/build")));
