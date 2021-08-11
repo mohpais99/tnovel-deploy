@@ -20,6 +20,20 @@ const generateUserToken = (email, id, is_admin, fullname) => {
     }
 }
 
+const makeSlug = (email, id, is_admin, fullname) => {
+    try {
+        const token = jwt.sign({
+            email, id, is_admin, fullname
+        }, process.env.SECRET, { expiresIn: '1d' });
+        
+        return token;
+    } catch (error) {
+        res.status(500).json({'message': 'Something wrong!'});
+    }
+}
+
+
 module.exports = {
-    generateUserToken
+    generateUserToken,
+    makeSlug
 }
