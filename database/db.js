@@ -9,7 +9,7 @@ const productionConfig = process.env.DATABASE_URL
 
 const pool = new Pool({
     connectionString: isProduction ? productionConfig : developmentConfig,
-    ssl: isProduction,
+    ssl: { rejectUnauthorized: false },
 })
 
 module.exports = {
