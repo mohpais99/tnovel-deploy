@@ -4,7 +4,7 @@ import Axios from "axios";
 
 let urls = {
     development: 'http://localhost:4000/v1/',
-    production: 'https://your-production-url.com/api/'
+    production: 'https://test-deploy-pern.herokuapp.com/v1/'
 }
 
 // export const testapis = process.env['APP_URL_' + urls.toUpperCase()]
