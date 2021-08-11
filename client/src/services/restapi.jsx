@@ -4,7 +4,7 @@ import Axios from "axios";
 
 let urls = {
     development: 'http://localhost:4000/v1/',
-    production: 'https://test-deploy-pern.herokuapp.com/v1/'
+    production: 'https://tnovel.herokuapp.com/v1/'
 }
 
 const isProduction = process.env.REACT_APP_NODE_ENV === 'production';
