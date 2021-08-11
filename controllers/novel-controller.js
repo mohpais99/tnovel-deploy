@@ -13,7 +13,7 @@ class GenreController {
                 })
         } catch (error) {
             console.log(error);
-            res.status(500).json({'data': []});
+            res.status(500).json({'data': [], 'message': error});
         }
     }
     async createNovel(req, res) {
