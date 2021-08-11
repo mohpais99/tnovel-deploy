@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.14c8810c.chunk.css",
+    "main.js": "/static/js/main.2ce14f02.chunk.js",
+    "main.js.map": "/static/js/main.2ce14f02.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.7545a8a1.js",
+    "runtime-main.js.map": "/static/js/runtime-main.7545a8a1.js.map",
+    "static/css/2.5e5eb74c.chunk.css": "/static/css/2.5e5eb74c.chunk.css",
+    "static/js/2.41d22beb.chunk.js": "/static/js/2.41d22beb.chunk.js",
+    "static/js/2.41d22beb.chunk.js.map": "/static/js/2.41d22beb.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.5e5eb74c.chunk.css.map": "/static/css/2.5e5eb74c.chunk.css.map",
+    "static/css/main.14c8810c.chunk.css.map": "/static/css/main.14c8810c.chunk.css.map",
+    "static/js/2.41d22beb.chunk.js.LICENSE.txt": "/static/js/2.41d22beb.chunk.js.LICENSE.txt",
+    "static/media/font.css": "/static/media/Revalia-Regular.be2f444f.ttf",
+    "static/media/style.css": "/static/media/bg-4.3724cd8a.jpg",
+    "static/media/boxicons.min.css": "/static/media/boxicons.c324d2b5.eot",
+    "static/media/death-march.e8995dff.jpg": "/static/media/death-march.e8995dff.jpg",
+    "static/media/devin.53634f61.jpg": "/static/media/devin.53634f61.jpg",
+    "static/media/equalizer.81f4f0ec.svg": "/static/media/equalizer.81f4f0ec.svg",
+    "static/media/image-not-available.13abf58b.jpg": "/static/media/image-not-available.13abf58b.jpg",
+    "static/media/log-horizon.60b6f393.jpg": "/static/media/log-horizon.60b6f393.jpg",
+    "static/media/logo2.7f9c3eb6.png": "/static/media/logo2.7f9c3eb6.png",
+    "static/media/tensei-shitara.085ec077.jpg": "/static/media/tensei-shitara.085ec077.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7545a8a1.js",
+    "static/css/2.5e5eb74c.chunk.css",
+    "static/js/2.41d22beb.chunk.js",
+    "static/css/main.14c8810c.chunk.css",
+    "static/js/main.2ce14f02.chunk.js"
+  ]
+}
