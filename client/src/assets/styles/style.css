@@ -1,0 +1,186 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #575757;
+    font-family: RedHadDisplay;
+    background: rgba(151, 151, 151, 0.03);
+}
+
+.no-wrap {
+    white-space: nowrap;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.h-100 {
+    height: 100% !important;
+}
+
+a {
+    text-decoration: none !important;
+    color: #575757;
+}
+
+.cursor-pointer {
+    cursor: pointer !important;
+}
+
+.c-tn {
+    color: #4ae9f7 !important;
+}
+
+.btn.b-none:hover {
+    color: #4ae9f7 !important;
+}
+
+.btn.b-none {
+    outline: none;
+    box-shadow: none;
+}
+
+.btn-icon {
+    width: 2.375rem;
+    height: 2.375rem;
+    padding: 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: .3;
+    background: #424242;
+}
+
+.page-header {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    background-image: url('assets/images/bg-4.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.page-header .banner {
+    display: flex;
+    align-self: center;
+    padding: 6rem 0 !important;
+}
+
+.banner .title {
+    font-size: 48px;
+    line-height: 1.28571429em;
+}
+
+.form-search {
+    max-width: 650px;
+    padding: 0 15px;
+    margin: 30px auto 0;
+    position: relative;
+    display: flex;
+}
+
+
+.menu-mobile {
+    position: fixed;
+    box-shadow: 0 0 5px rgba(0,0,0,.4) !important;
+    bottom: 0;
+    left: 0;
+    top: auto;
+    right: auto;
+    z-index: 101;
+    width: 100%;
+    margin: 0;
+    min-height: 2.85714286em;
+    font-size: 1rem;
+    background-color: #fff;
+}
+
+
+.menu-mobile .item {
+    overflow: hidden;
+    padding: 15px 0;
+    text-align: center;
+    min-width: 25px;
+    position: relative;
+    line-height: 1;
+    width: 20%;
+    height: auto;
+    color: #c8c8c8;
+    transition: all .1s ease;
+    text-transform: none;
+    cursor: pointer;
+}
+
+.menu-mobile .item.active {
+    font-weight: 400;
+}
+
+.menu-mobile .item.archive {
+    background-color: #00edfa;
+    margin: -10px 0 10px;
+    border-radius: 7px;
+    color: #fff;
+}
+
+.menu-mobile .item::before {
+    background: transparent !important;
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 1px;
+}
+
+.menu-mobile .item.archive.active::after {
+    background-color: #fff;
+    -webkit-transition: bottom .5s;
+    transition: bottom .5s;
+    border-radius: 5px;
+    position: absolute;
+    display: block;
+    bottom: -5px;
+    left: 6px;
+    height: 10px;
+    content: "";
+    width: 85%;
+}
+
+.menu-mobile .item:not(.archive).active::after {
+    background-color: #00edfa;
+    -webkit-transition: bottom .5s;
+    transition: bottom .5s;
+    border-radius: 5px;
+    position: absolute;
+    display: block;
+    bottom: -5px;
+    left: 6px;
+    height: 10px;
+    content: "";
+    width: 85%;
+}
+
+.menu-mobile .item:not(.archive):hover .icon,
+.menu-mobile .item:not(.archive).active .icon {
+    color:#00edfa !important;
+}
+
+.menu-mobile .item .icon {
+    height: auto;
+    position: relative;
+    max-width: 100%;
+}
+
